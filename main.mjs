@@ -32,5 +32,14 @@ import fs from 'fs'
             const dataUser = JSON.parse(fileData)
             console.log (`Jestes ${dataUser.name} ${dataUser.surename} oraz masz ${dataUser.age} lat.`)
         }
-    
+        catch(err){
+            console.error(err)
+            console.log("wystapil blad w zapisie danych")
+        }
+        finally {
+            rl.close()
+        }
     }
+
+    main()
+    
